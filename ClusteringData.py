@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 def clustering(data, num_partition):
     cls = KMeans(num_partition, n_jobs=20)
-    c_predict = cls.fit.predict(data)
+    c_predict = cls.fit_predict(data)
     centers = cls.cluster_centers_
     return cls, c_predict, centers
 
